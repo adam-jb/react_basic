@@ -1,0 +1,13 @@
+# docker-compose up --build
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - COSMOS_ENDPOINT=${COSMOS_ENDPOINT}
+      - COSMOS_KEY=${COSMOS_KEY}
+      - COSMOS_DATABASE=${COSMOS_DATABASE}
+      - COSMOS_CONTAINER=${COSMOS_CONTAINER}
+      - PORT=3000
